@@ -62,7 +62,7 @@ else {
 };
 
 if (savingsTotal === 0){
-  $('#balance2').css('background-color', 'red');
+  $('#balance2').attr('id','line');
 };
 
 // if checkings total bigger than 0 make background grey
