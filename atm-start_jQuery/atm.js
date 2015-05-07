@@ -16,7 +16,7 @@ $('#deposit1').on('click', function() {
  // $('#balance1').html('$'+number)
  // var balance1 = $('#balance1').html();
  checkingTotal = checkingTotal + parseInt(number);
- $('#balance1').html(checkingTotal);
+ $('#balance1').html('£' + checkingTotal);
 });
 
 $('#withdraw1').on('click', function() {
@@ -28,8 +28,8 @@ $('#withdraw1').on('click', function() {
    number = number - checkingTotal;
    checkingTotal = 0;
    savingsTotal= savingsTotal-number;
-   $('#balance1').html(checkingTotal);
-   $('#balance2').html(savingsTotal);
+   $('#balance1').html('£' + checkingTotal);
+   $('#balance2').html('£' + savingsTotal);
   }
   else {
     alert("no money in the bank");
@@ -45,7 +45,7 @@ $('#deposit2').on('click', function() {
   console.log(number);
  // $("#amount1").val(number);
   savingsTotal = savingsTotal + parseFloat(number);
- $('#balance2').html(savingsTotal);
+ $('#balance2').html('£' + savingsTotal);
 });
 
 
@@ -55,7 +55,7 @@ $('#withdraw2').on('click', function() {
  // $('#amount1').val(number)
  if(number <=savingsTotal) {
   savingsTotal = savingsTotal - parseFloat(number);
-  $('#balance2').html(savingsTotal);
+  $('#balance2').html('£' + savingsTotal);
 }
 else {
   alert("no money in the bank");
